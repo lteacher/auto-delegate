@@ -1,0 +1,28 @@
+{
+  "name": "auto-delegate",
+  "version": "0.1.0",
+  "description": "Simple delegation utility",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lteacher/auto-delegate.git"
+  },
+  "scripts": {
+    "test": "nyc ava",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "author": "lteacher",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.15.0"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "coveralls": "^2.11.12",
+    "exceljs": "^0.2.14",
+    "nyc": "^8.1.0"
+  },
+  "keywords": [
+    "delegate"
+  ]
+}
