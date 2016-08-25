@@ -1,6 +1,6 @@
 {
   "name": "auto-delegate",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple delegation utility",
   "main": "lib/index.js",
   "repository": {
@@ -14,7 +14,8 @@
   "author": "lteacher",
   "license": "MIT",
   "dependencies": {
-    "lodash": ">=3.10.1"
+    "lodash.bindkey": ">=3.10.1",
+    "lodash.union": ">=3.10.1"
   },
   "devDependencies": {
     "ava": "^0.16.0",
