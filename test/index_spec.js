@@ -60,8 +60,15 @@ test(`A non ES6 class can be delegated happily`, async t => {
 
 test(`Can override a delegated method`, async t => {
   let t1 = new Tracker();
-  t1.increment = () => 'Not counting'
+  t1.increment = () => 'Not counting';
   t.is(t1.increment(), 'Not counting');
+});
+
+test(`Can change a delegated property`, async t => {
+  let t1 = new Tracker();
+  t1.count = 10;
+  t.is(t1.count, 10);
+  t.is(t1._delegate.count, 10);
 });
 
 test(`Can delegate to a random object`, async t => {
