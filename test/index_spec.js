@@ -1,5 +1,4 @@
 import test from 'ava';
-import Excel from 'exceljs'
 import delegate from '../lib/index';
 import {Counter, Point} from './fixtures/setup';
 
@@ -71,12 +70,6 @@ test(`Can change a delegated property`, async t => {
   t.is(t1._delegate.count, 10);
 });
 
-test(`Can delegate to a random object`, async t => {
-  let wb = new CustomWorkbook();
-  wb.addWorksheet('Cool Sheet1', {properties: {showGridLines: false}});
-  t.is(wb.getWorksheet(1).properties.model.showGridLines, false);
-});
-
 test(`A built-in can be delegated`, async t => {
   let parser = new AwesomeParser();
 
@@ -101,11 +94,5 @@ class TrackedLocation {
   constructor() {
     delegate(this, new Point(10, 20), '_point');
     delegate(this, new Counter(), '_counter');
-  }
-}
-
-class CustomWorkbook {
-  constructor() {
-    delegate(this, new Excel.Workbook(), '_workbook');
   }
 }

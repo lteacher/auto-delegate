@@ -2,6 +2,8 @@
 
 > A simple auto delegation utility which attaches all the properties of some delegate to a single property under the owner
 
+[![NPM](https://nodei.co/npm/auto-delegate.png?downloads=true&stars=true)](https://nodei.co/npm/auto-delegate/)
+
 [![Build Status](https://travis-ci.org/lteacher/auto-delegate.svg?branch=master)](https://travis-ci.org/lteacher/auto-delegate)
 [![Coverage Status](https://coveralls.io/repos/github/lteacher/auto-delegate/badge.svg?branch=master)](https://coveralls.io/github/lteacher/auto-delegate?branch=master)
 ## What for?
@@ -11,9 +13,11 @@ This can be helpful if you want to mixin some object instance and its functional
 Here is some random example from the tests (sort of)
 
 ```javascript
+import delegate from 'auto-delegate';
+
 // There is some counter class (babel-ified)
 class Counter {
-  let count = 0;
+  count = 0;
   
   increment = () => this.count++;
   decrement = () => this.count--;
