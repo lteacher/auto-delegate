@@ -1,6 +1,6 @@
 {
   "name": "auto-delegate",
-  "version": "0.1.3",
+  "version": "1.0.0-alpha",
   "description": "Simple delegation utility",
   "main": "lib/index.js",
   "repository": {
